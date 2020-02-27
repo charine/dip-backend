@@ -21,7 +21,7 @@
 ดาวน์โหลดเป็นไฟล์ zip ไปใช้งานได้เลย
 
 ### directories and files:
-เมื่อได้โฟลเดอร์มาแล้ว สามารถนำโฟล์เดอร์ที่ชื่อ **examples** ไปใช้งานต่อได้เลย ด้านล่างจะแสดงโฟลเดอร์ **ที่เกี่ยวข้อง** ที่อยู่ภายใน (อื่นๆ ที่อยู่นอกเหนือจากที่บอก เป็นไฟล์สำหรับการพัฒนา theme)
+เมื่อได้โฟลเดอร์มาแล้ว สามารถนำโฟล์เดอร์ที่ชื่อ **docs** ไปใช้งานต่อได้เลย ด้านล่างจะแสดงโฟลเดอร์ **ที่เกี่ยวข้อง** ที่อยู่ภายใน (อื่นๆ ที่อยู่นอกเหนือจากที่บอก เป็นไฟล์สำหรับการพัฒนา theme)
 
 ```
 docs
@@ -35,9 +35,31 @@ docs
 │   │   └── innerstyle.js
 │   └── sass
 ├── index.html
-└── login.html
+├── index_light.html
+└── home.html
 ```
 
 ### How to
 
-จะมีบางส่วนที่ถูกเขียนเติมเข้าไปด้วยวิธี *pseudoStyle* ใน javascript เลยต้องมีการเพิ่มภาพ หรือกำหนดสีต่างๆ ใน Attribute data ของ div ดังนี้ อยู่ที่ **div.sidebar**
+จะมีบางส่วนที่ถูกเขียนเติมเข้าไปด้วยวิธี *pseudoStyle* ใน javascript เลยต้องมีการเพิ่มภาพ หรือกำหนดสีต่างๆ ใน Attribute data ของ div อยู่ที่ **div.sidebar** ดังนี้
+
+
+**home.html**
+```
+<div class="sidebar" id="sidebar" data-color="#fff0ba" data-side-color="#d1dde2" data-background-color="#0a0c40" data-side-image="../assets/img/dip/side.png" data-image="../assets/img/dip/side.png" data-image-navbar="../assets/img/dip/gradian_right.png">
+```
+
+1. `data-color` : String | สีปุ่มที่ active
+2. `data-side-color` : String | (ไม่ได้ใช้แล้ว)
+3. `data-background-color` : String | สีพื้นหลัง Navbar
+4. `data-side-image` : String(URL) | ภาพพื้นหลัง Side Menu
+5. `data-image` : String(URL) | (ไม่ได้ แต่ลบไม่ได้เพราะเป็น default ระบบ)
+6. `data-image-navbar` : String(URL) | ภาพพื้นหลังที่จะซ้อนอยู่บน Navbar
+
+
+**index.html & index_light.html**
+```
+<div id="listyle" class="wrapper dip-login" data-login-style="dark">
+```
+
+`data-login-style` : String | เลือก theme ของหน้า login ระหว่าง " dark | light "
