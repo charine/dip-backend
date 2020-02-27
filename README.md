@@ -3,7 +3,11 @@
 ระบบหลังบ้านโครงการ DIP เขียนด้วยภาษา **HTML CSS Javascript** และใช้ **Bootstrap 4** เป็นโครงหลัก
 
 **ตัวอย่างหน้า**
-![alt text](examples/assets/img/dip/screencapture/home.jpg "Home DIP Backend")
+![alt text](docs/assets/img/dip/screencapture/login_dark.jpg "Home DIP Backend")
+
+![alt text](docs/assets/img/dip/screencapture/login_light.jpg "Home DIP Backend")
+
+![alt text](docs/assets/img/dip/screencapture/home.jpg "Home DIP Backend")
 
 
 ## Technical:
