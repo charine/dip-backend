@@ -12,7 +12,7 @@ var src = {
 // Static Server + watching scss/html files
 gulp.task('serve', function() {
     browserSync.init({
-        server: "examples"
+        server: "docs"
     });
 
     gulp.watch(src.html).on('change', reload);
