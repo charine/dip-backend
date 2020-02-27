@@ -9,6 +9,7 @@ function sidebarBackground() {
     $sidebar_sidecolor = $findsidebar.dataset.sideColor;
     $sidebar_color = $findsidebar.dataset.color;
     $navbar_bg = $findsidebar.dataset.imageNavbar;
+    $sidebar_img = $findsidebar.dataset.sideImage;
 
     HTMLElement.prototype.pseudoStyle = function(element, value, content) {
         var _this = this;
@@ -47,16 +48,11 @@ function sidebarBackground() {
     http://mcgivery.com/htmlelement-pseudostyle-settingmodifying-before-and-after-in-javascript/
     */
 
+    //#Set Style Navbar
     $findbackground = $('.sidebar-background');
     $findbackground.attr("id", "sidebar-background");
-
     $idbackground = document.getElementById('sidebar-background');
 
-    console.log($idbackground);
-    //#Set Style Sidebar
-    $idbackground.pseudoStyle("after", { "background": $sidebar_bgcolor + "!important", "opacity": "0.7!important" }, "sidebar-background");
-
-    //#Set Style Navbar
     // -- ภาพที่จะซ้อนบนพื้นหลัง --
     var navbar_custom = {
         "position": "absolute",
@@ -71,7 +67,15 @@ function sidebarBackground() {
         "left": "0"
     };
     $idbackground.pseudoStyle("after", navbar_custom, "navbar");
-    //$idbackground.pseudoStyle("", navbar_custom, "navbar"); <- เขียนแบบแทน class นั้นไปเลย
+
+    //#Set Style Sidebar
+    $idsidebar = $('.sidebar-wrapper');
+    var sidebar_custom = {
+        "background-image": "url('" + $sidebar_img + "')",
+        "background-repeat": "no-repeat",
+        "background-position": "center"
+    }
+    $idsidebar.css(sidebar_custom);
 
     //#Set important class of 'sidebar' by dynamic color
     $dataBgcolor = '[data-background-color="' + $sidebar_bgcolor + '"]';

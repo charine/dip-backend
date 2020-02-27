@@ -1,4 +1,4 @@
-/* Navbar */
+/* == Navbar == */
 
 .navbar {
     background-image: url('../img/dip/nav_bg_small.png');
@@ -13,7 +13,6 @@
 
 .navbar .navbar-nav .nav-item .nav-link {
     color: #fcda70;
-    /* line-height: 6px; */
     font-size: 14px;
 }
 
@@ -45,7 +44,29 @@
 }
 
 
-/* Logo */
+/* Hamberger Menu */
+
+.navbar .navbar-toggler.navbar-toggler-right {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+}
+
+.navbar .navbar-toggler .burger-lines {
+    background-color: #ffffff;
+}
+
+@media screen and (max-width: 767.98px) {
+    .nav-mobile-menu .nav-link {
+        color: #061a4f!important;
+    }
+    .nav-mobile-menu .dip-user {
+        padding-left: 0!important;
+    }
+}
+
+
+/* == Logo == */
 
 .logo {
     background-image: url('../img/dip/nav_bg_small.png');
@@ -61,7 +82,7 @@
 }
 
 
-/* Side Bar */
+/* == Side Bar == */
 
 .sidebar:after,
 body>.navbar-collapse:after {
@@ -128,7 +149,7 @@ body>.navbar-collapse:after {
 }
 
 
-/* Footer */
+/* == Footer == */
 
 @media (min-width: 992px) {
     .footer .copyright {
@@ -140,7 +161,7 @@ body>.navbar-collapse:after {
 }
 
 
-/* Login Page */
+/* == Login Page == */
 
 .dip-login {
     position: relative;
@@ -158,7 +179,7 @@ body>.navbar-collapse:after {
 }
 
 
-/* Dark Theme */
+/* == Dark Theme == */
 
 .dark {
     background-image: url('../img/dip/dark.jpg');
@@ -244,7 +265,7 @@ body>.navbar-collapse:after {
 }
 
 
-/* Light Theme */
+/* == Light Theme == */
 
 .light {
     background-image: url('../img/dip/light.jpg');
