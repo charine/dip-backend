@@ -10,8 +10,6 @@ function sidebarBackground() {
     $sidebar_color = $findsidebar.dataset.color;
     $navbar_bg = $findsidebar.dataset.imageNavbar;
 
-    console.log("sidecolor: ", $sidebar_sidecolor);
-
     HTMLElement.prototype.pseudoStyle = function(element, value, content) {
         var _this = this;
         var _sheetId = "pseudoStyles";
@@ -53,6 +51,8 @@ function sidebarBackground() {
     $findbackground.attr("id", "sidebar-background");
 
     $idbackground = document.getElementById('sidebar-background');
+
+    console.log($idbackground);
     //#Set Style Sidebar
     $idbackground.pseudoStyle("after", { "background": $sidebar_bgcolor + "!important", "opacity": "0.7!important" }, "sidebar-background");
 
