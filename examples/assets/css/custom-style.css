@@ -230,6 +230,17 @@ body>.navbar-collapse:after {
     background-color: #ff941f;
 }
 
+.dark .btn-submit_test {
+    width: 100%;
+    height: 45px;
+    color: #000000;
+    border-radius: 5px;
+    border: none;
+    background-color: #ff941f;
+    text-align: center;
+    padding-top: 10px;
+}
+
 .dark .btn-link {
     color: #ffffff;
 }
@@ -313,6 +324,17 @@ body>.navbar-collapse:after {
     border-radius: 5px;
     border: none;
     background-color: #061a4f;
+}
+
+.light .btn-submit_test {
+    width: 100%;
+    height: 45px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: none;
+    background-color: #061a4f;
+    text-align: center;
+    padding-top: 10px;
 }
 
 .light .btn-link {
