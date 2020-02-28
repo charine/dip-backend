@@ -244,7 +244,6 @@ body>.navbar-collapse:after {
 
 @media screen and (min-width: 992px) {
     .footer .copyright {
-        font-size: 11px;
         float: left!important;
     }
     .footer .footer-menu {
@@ -259,6 +258,12 @@ body>.navbar-collapse:after {
     }
     .footer-mobile a {
         color: #000000;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .footer .copyright {
+        font-size: 11px;
     }
 }
 
