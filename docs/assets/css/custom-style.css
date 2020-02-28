@@ -118,6 +118,9 @@
         margin: 0px;
         transform: none!important;
     }
+    .nav-mobile-menu .nav-item:hover .nav-link .nav-icon-alert span {
+        color: red!important;
+    }
     .nav-mobile-menu .nav-item .nav-link .nav-icon-alert span {
         color: #ffffff!important;
     }
