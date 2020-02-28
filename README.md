@@ -13,6 +13,7 @@
 ## Technical:
 - HTML, CSS(Compile From Scss), Javascript
 - Bootstrap 4
+- Bootstrap Table
 
 
 ## Quick start

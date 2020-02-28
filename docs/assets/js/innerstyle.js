@@ -1,6 +1,14 @@
 $(document).ready(function() {
     sidebarBackground();
-    console.log("init innerstyle.js");
+    setPaginationFooter();
+
+
+    $(window).resize(function() {
+        // ไว้จัดการ pagination ในโหมด mobile ลบ class ออกเพราะมันไม่อยู่ตรงกลางเวลา responsive และมองไม่เห็นปุ่มที่เหลือด้วย
+        setPaginationFooter();
+    });
+
+
 });
 
 function sidebarBackground() {
@@ -123,4 +131,31 @@ function sidebarBackground() {
     // $('.sidebar-wrapper').css({
     //     "background-color": $sidebar_sidecolor
     // });
+}
+
+function setPaginationFooter() {
+    console.log($(window).width());
+
+    if ($(window).width() < 992) {
+        setTimeout(() => {
+            $tablepagination = $('#inittable_paginate');
+            $tableinfo = $('#inittable_info');
+            $parentpagin = $tablepagination.parent();
+            $parentinfo = $tableinfo.parent();
+            $parentpagin.removeClass("col-sm-12 col-md-7");
+            $parentinfo.removeClass("col-sm-12 col-md-5");
+            $tablepagination.addClass("mt-3");
+        }, 1000);
+    } else {
+        setTimeout(() => {
+            $tablepagination = $('#inittable_paginate');
+            $tableinfo = $('#inittable_info');
+            $parentpagin = $tablepagination.parent();
+            $parentinfo = $tableinfo.parent();
+            $parentpagin.addClass("col-sm-12 col-md-7");
+            $parentinfo.addClass("col-sm-12 col-md-5");
+            $tablepagination.removeClass("mt-3");
+        }, 1000);
+    }
+
 }

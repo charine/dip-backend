@@ -59,6 +59,7 @@ $(document).ready(function() {
 
 // activate collapse right menu when the windows is resized
 $(window).resize(function() {
+    // if (screen.width <= 991) { //@Test
     if ($(window).width() <= 991) {
         lbd.initRightMenu();
     }
@@ -119,8 +120,9 @@ lbd = {
 
             mobile_menu_initialized = true;
         } else {
-            console.log('window with:' + $(window).width());
             if ($(window).width() > 991) {
+                console.log("in function");
+
                 // reset all the additions that we made for the sidebar wrapper only if the screen is bigger than 991px
                 $sidebar_wrapper.find('.navbar-form').remove();
                 $sidebar_wrapper.find('.nav-mobile-menu').remove();

@@ -4,9 +4,9 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
 var src = {
-    scss: 'examples/assets/scss/*.scss',
-    css: 'examples/assets/css',
-    html: 'examples/*.html'
+    scss: 'docs/assets/scss/*.scss',
+    css: 'docs/assets/css',
+    html: 'docs/*.html'
 };
 
 // Static Server + watching scss/html files
