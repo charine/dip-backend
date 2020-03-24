@@ -2,6 +2,10 @@
 
 ระบบหลังบ้านโครงการ DIP เขียนด้วยภาษา **HTML CSS Javascript** และใช้ **Bootstrap 4** เป็นโครงหลัก
 
+**ตัวอย่าง page**
+
+[Go to project on Github](https://charine.github.io/dip-backend/)
+
 **ตัวอย่างหน้า**
 ![alt text](docs/assets/img/dip/screencapture/login_dark.jpg "Home DIP Backend")
 
@@ -21,7 +25,30 @@
 ### Install
 ดาวน์โหลดเป็นไฟล์ zip ไปใช้งานได้เลย
 
-### directories and files:
+ถ้าต้องการ run project โดยใช้ node.js ช่วย ให้ติดตั้งตามนี้ผ่าน command line
+```
+// == ขั้นตอนติดตั้ง gulp ให้ generate file sass -> css และ liverelode ==
+//npm install -g gulp <- ถ้าที่เครื่องยังไม่เคยติดตั้ง gulp ต้องติดตั้งแบบ global ก่อน
+//npm install --save-dev gulp
+//npm install node-sass gulp-sass --save-dev
+//npm install browser-sync gulp --save-dev
+```
+
+**คำสั่งพื้นฐาน**
+- เปิด project
+```
+gulp
+
+//or
+
+gulp serve
+```
+- build file style
+```
+gulp sass
+```
+
+### directories and files
 เมื่อได้โฟลเดอร์มาแล้ว สามารถนำโฟล์เดอร์ที่ชื่อ **docs** ไปใช้งานต่อได้เลย ด้านล่างจะแสดงโฟลเดอร์ **ที่เกี่ยวข้อง** ที่อยู่ภายใน (อื่นๆ ที่อยู่นอกเหนือจากที่บอก เป็นไฟล์สำหรับการพัฒนา theme)
 
 ```
